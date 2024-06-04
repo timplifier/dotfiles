@@ -1,0 +1,42 @@
+set scrolloff=5
+set number relativenumber
+set idearefactormode=keep
+set clipboard+=unnamed
+set ideajoin
+set incsearch
+set keep-english-in-normal[-and-restore-in-insert]
+set keep-english-in-normal-and-restore-in-insert
+set keep-english-in-normal[com.apple.keylayout.US]
+let keep_input_source_in_insert="com.apple.keylayout.U.S"
+
+map Q gq
+
+let mapleader = "T"
+
+vmap <leader>y "+y
+vmap <leader>d "+d
+nmap <leader>y "+yy
+nmap <leader>p "+p
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P
+nnoremap <leader>p<leader> <\_dP>
+
+nnoremap <C-T> <NOP>
+nmap <C-T>h : action PreviousTab<CR>
+nmap <C-T>l : action NextTab<CR>
+nmap <leader>bd : action CloseEditor<CR>
+nnoremap <leader><leader> <C-Tab>
+set surround
+
+set NERDTree
+let g:NERDTreeMapActivateMode='l'
+let g:NERDTreeMapJumpParent ='h'
+
+set multiple-cursors
+set sneak
+set quickscope
+set matchit
+
+"Enable always switching to english when entering Normal Mode, requires : https://plugins.jetbrains.com/plugin/9615-ideavimextension"
+set keep-english-in-normal
